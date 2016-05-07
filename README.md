@@ -7,14 +7,14 @@ step 2: Initialize tsconfig file <br/>
         ```tsc --init```
 
 step 3: Intialize package.json and download Angular packages <br/>
-        ```npm init```
-        ```npm install angular --save-dev```
-        ```npm install angular-route --save-dev```
+        ```npm init
+		npm install angular --save-dev
+		npm install angular-route --save-dev```
 
 step 4: Install Angular related libararies in TypeScript <br/>
-        ```tsd install angular```
-        ```tsd install angular-route```
-        ```tsd install jquery```
+        ```tsd install angular
+		tsd install angular-route
+		tsd install jquery```
 
 step 5: Create application typescript files that extend with .ts <br/>
         run "tsc -w" command to auto compile from ts to js files.
