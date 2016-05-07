@@ -1,0 +1,15 @@
+{
+  "name": "angular-ts",
+  "version": "1.0.0",
+  "description": "This is sample angular with typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anil",
+  "license": "ISC",
+  "devDependencies": {
+    "angular": "^1.5.3",
+    "angular-route": "^1.5.3"
+  }
+}

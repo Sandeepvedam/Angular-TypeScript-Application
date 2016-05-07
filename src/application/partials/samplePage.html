@@ -1,0 +1,40 @@
+<!-- BEGIN TEMPLATE VIEW -->
+
+<html>
+
+    <div style="text-align: center;margin-top: 100px;color: green;font-size: x-large">{{AngularTsController.title}}</div>
+
+    <div style="text-align:center" ng-show="AngularTsController.isButtonVisible">
+        <p style="text-align:center;font-size: large;color: blue"> please click below button to get sample data </p>
+        <button style="text-align:center" ng-click="AngularTsController.getData();">Get</button>
+    </div>
+
+    <div ng-if="AngularTsController.isDataRetrieved === true">
+        <p style="text-align:center;font-size: large;color: blue"> Color details : </p>
+        <table align="center">
+            <tr>
+                <th>ID</th>
+                <th>Color</th>
+                <th>Value</th>
+                <th></th>
+            </tr>
+
+            <tbody>
+                <tr ng-repeat="details in AngularTsController.data">
+                    <td> {{details.id}}</td>
+                    <td>{{details.color}}</td>
+                    <td>{{details.value}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <br/><br/>
+
+    <div style="text-align:center">
+        <button style="text-align:center" ng-hide="AngularTsController.isButtonVisible" ng-click="AngularTsController.closeData();">Close</button>
+    </div>
+
+</html>
+
+<!-- END TEMPLATE VIEW -->
