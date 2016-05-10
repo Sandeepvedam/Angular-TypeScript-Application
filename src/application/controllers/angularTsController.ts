@@ -18,7 +18,7 @@ module Application.Controller{
         private isDataRetrieved : boolean;
         private isButtonVisible : boolean;
 
-        // INje
+        //Inject AngularTSFactory
         static $inject = ['AngularTsFactory'];
 
         constructor(AngularTsFactory:factory.IAngularTs){
@@ -31,15 +31,18 @@ module Application.Controller{
             this.loadTitle();
         }
 
+        //It loads the title of application
         private loadTitle(){
             self.title="Angular-TypeScript application";
         }
         
+        //This method get's the required data
         private getData(){
             this.AngularTsFactory.getData(this.getData_callback);
         }
 
-        private getData_callback(responseData:Object){
+        //This call back method contains the response
+        private getData_callback(responseData:Array<Object>){
             if(responseData.length !==0){
                 self.data = responseData;
                 self.isDataRetrieved = true;
@@ -47,6 +50,7 @@ module Application.Controller{
             }
         }
 
+        // This method clears the json data
         private closeData(){
             self.isButtonVisible = true;
             self.isDataRetrieved = false;
